@@ -64,3 +64,11 @@ class AddWindowForm(QWidget, AddEditWindow):
         shutil.copy(self.img_path_from, "recipe_images")
         
         
+    def  clear_inputs(self):
+        # con la funcion clear se limpian todos los inputs de la pantalla
+        self.title_line_edit.clear()
+        self.category_combo_box.clear()
+        self.url_line_edit.clear()
+        self.budget_line_edit.clear()
+        self.ingredients_text_edit.clear()
+        self.directions_text_edit.clear()
