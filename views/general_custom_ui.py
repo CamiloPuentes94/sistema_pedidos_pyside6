@@ -34,6 +34,8 @@ class GeneralCustomUi():
     # funcion para capturar los click de los botones de la barra de titulo    
         
     def set_title_bar_button(self):
+        # funcion de captura de click a el boton de ceerrar, y se le agrega la funcion close
+        self.ui.close_button.clicked.connect(self.ui.close)
         # funcion de captura de click a el boton de maximizar
         self.ui.maximize_button.clicked.connect(self.maximize_window)
         # funcion de captura de click a el boton de restaurar
