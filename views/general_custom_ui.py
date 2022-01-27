@@ -1,6 +1,13 @@
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QGraphicsDropShadowEffect
 
+category_data = (
+    "Recetas Italianas",
+    "Postres",
+    "Bebidas"
+)
+
+
 class GeneralCustomUi():
     def __init__(self,ui):
         self.ui = ui
@@ -74,3 +81,6 @@ class GeneralCustomUi():
         shadow.setColor("#000000")
         # Se indica en el frame backgroud el efecto de sombra
         self.ui.background_frame.setGraphicsEffect(shadow)
+        
+    def fill_category_cb(self):
+        self.ui.category_combo_box.addItems(category_data)
