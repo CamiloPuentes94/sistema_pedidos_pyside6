@@ -9,6 +9,17 @@ class GeneralCustomUi():
         # Con la funcion mouseMoveEvent captura el moviento del mouse cuando pasa por widget
         self.ui.top_bar_grame.mouseMoveEvent = self.move_window
         self.set_window_shadow()
+        
+        
+    def maximize_window(self):
+        # con esta funcion maximizamos la ventana de la aplicacion
+        self.ui.showMaximized()
+        # con esta funcion ocultamos el boton de maximizar
+        self.ui.maximize_button.setVisible(False)
+        
+        
+        
+        
     # con esta funcion removemos la parte     
     def remove_default_title_bar(self):
         self.ui.setAttribute(Qt.WA_TranslucentBackground, True)
