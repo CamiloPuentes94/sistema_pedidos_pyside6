@@ -59,3 +59,8 @@ class AddWindowForm(QWidget, AddEditWindow):
         self.image_path_line_edit.setText(img_name)
         
         
+    def save_img(self):
+        # de este modo se guarda en la carpeta de recipes y se deb importar de python shutil
+        shutil.copy(self.img_path_from, "recipe_images")
+        
+        
