@@ -30,6 +30,7 @@ class AddWindowForm(QWidget, AddEditWindow):
         url = self.url_line_edit.text()
         # Para obetener el valor de budget se hace con la funcion text
         budget = self.budget_line_edit.text()
+        img_path = self.img_path_to
         # para obtener el valor de un text edit se debe llamar la funcion toPlainText
         ingredients = self.ingredients_text_edit.toPlainText()
         directions = self.directions_text_edit.toPlainText()
@@ -39,13 +40,15 @@ class AddWindowForm(QWidget, AddEditWindow):
             category,
             url,
             budget,
+            img_path,
             ingredients,
             directions
         )
         
         if recipes.insert(data):
-    
+            self.save_img()
             print("Recipe Added")
+            self.clear_inputs()
             
     def select_img(self):
         
