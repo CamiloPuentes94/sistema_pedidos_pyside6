@@ -9,21 +9,31 @@ class GeneralCustomUi():
         #funcion para mouseMoveEvent captura el moviento del mouse cuando pasa por widget
         self.ui.top_bar_grame.mouseMoveEvent = self.move_window
         self.set_window_shadow()
-        
+        self.set_title_bar_button()
+    
+    # funcion para maximizar ventana    
         
     def maximize_window(self):
         #funcion de maximizar la ventana de la aplicacion
         self.ui.showMaximized()
         #funcion para ocultamos el boton de maximizar
         self.ui.maximize_button.setVisible(False)
-        
+       
+    # funcion para restaurar ventana  
         
     def restore_window(self):
         #funcion de restaurar la ventana a tamaño normal
         self.ui.showNormal()
         # funcion de visualizar botton de maximizar
         self.ui.maximize_button.setVisible(True)
+    
+    # funcion para capturar los click de los botones de la barra de titulo    
         
+    def set_title_bar_button(self):
+        # funcion de captura de click a el boton de maximizar
+        self.ui.maximize_button.clicked.connect(self.maximize_window)
+        # funcion de captura de click a el boton de restaurar
+        self.ui.restore_button.clicked.connect(self.restore_window)
         
     # funcion para removemos la parte del barra por defecto de la aplicacion   
     def remove_default_title_bar(self):
