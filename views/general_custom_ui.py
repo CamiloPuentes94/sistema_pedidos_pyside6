@@ -7,8 +7,8 @@ class GeneralCustomUi():
         
         self.remove_default_title_bar()
         # Con la funcion mouseMoveEvent captura el moviento del mouse cuando pasa por widget
-        self.ui.top_bar_grame.mouseMoveEvent = self.move_window 
-        
+        self.ui.top_bar_grame.mouseMoveEvent = self.move_window
+        self.set_window_shadow()
     # con esta funcion removemos la parte     
     def remove_default_title_bar(self):
         self.ui.setAttribute(Qt.WA_TranslucentBackground, True)
@@ -31,5 +31,12 @@ class GeneralCustomUi():
     def set_window_shadow(self):
         # obtine el objeto de la clase, se pasa la venta parent 
         shadow = QGraphicsDropShadowEffect(self.ui)
-        # con este parametro se seleciona la opasiada
-        shadow.setBlurRadius
+        # se envia la propiedad para que tan borroso se vera la sombra
+        shadow.setBlurRadius(25)
+        # esto se pone para que la sombre se vea alrededor de la ventana
+        shadow.setXOffset(0)
+        shadow.setYOffset(0)
+        # Se indica el color de la sombra
+        shadow.setColor("#000000")
+        # Se indica en el frame backgroud el efecto de sombra
+        self.ui.background_frane.setGraphicsEffect(shadow)
