@@ -16,3 +16,15 @@ def insert(data):
     )
     VALUES(%s, %s, %s, %s, %s, %s, %s)
     """
+    
+    try:
+        cur = conn.cursor()
+        cur.execute(sql, data)
+        conn.commit()
+        return True
+    except connector.Error as err:
+        print(f"Error at insert_recurse function: {err.msg}")
+        return False
+    finally:
+        cur.close()
+        conn.close()
