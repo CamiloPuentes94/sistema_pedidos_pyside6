@@ -18,7 +18,7 @@ class GeneralCustomUi():
     def mouse_press_event(self, event):
         self.drag_pos = event.globalPos()
     
-    # Esta funcion va a capturar el evento
+    # Esta funcion se realiza el movimiento de la pantalla
     def move_window(self, event):
         # si se pulsa el click izquierdo en el widget
         if event.buttons() == Qt.LeftButton:
