@@ -12,3 +12,7 @@ class AddWindowForm(QWidget, AddEditWindow):
         
         self.setupUi(self)
         self.ui = GeneralCustomUi(self)
+        
+    #esta funcion viene de QWidget no es creada por nosotros es de la clase QWidget, se debe poner para poder arrastrar la ventana
+    def mousePressEvent(self, event):
+        self.ui.mouse_press_event(event)
