@@ -6,18 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>966</width>
-    <height>755</height>
+    <width>1014</width>
+    <height>462</height>
    </rect>
   </property>
-  <property name="font">
-   <font>
-    <pointsize>10</pointsize>
-    <bold>true</bold>
-   </font>
-  </property>
   <property name="windowTitle">
-   <string>Main_window</string>
+   <string>Form</string>
   </property>
   <property name="styleSheet">
    <string notr="true">border-radius: 5px;</string>
@@ -63,9 +57,9 @@
        <number>10</number>
       </property>
       <item>
-       <widget class="QFrame" name="background_frane">
+       <widget class="QFrame" name="background_frame">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(218, 218, 218);</string>
+         <string notr="true">background-color: rgb(245, 240, 225);</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -91,12 +85,6 @@
          </property>
          <item>
           <widget class="QFrame" name="content_frame">
-           <property name="focusPolicy">
-            <enum>Qt::NoFocus</enum>
-           </property>
-           <property name="contextMenuPolicy">
-            <enum>Qt::CustomContextMenu</enum>
-           </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
@@ -105,7 +93,7 @@
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
-             <widget class="QFrame" name="top_bar_grame">
+             <widget class="QFrame" name="top_bar_frame">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -119,7 +107,7 @@
                </size>
               </property>
               <property name="styleSheet">
-               <string notr="true">background-color: rgb(30, 61, 89);</string>
+               <string notr="true">background-color: #1e3d59;</string>
               </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
@@ -129,13 +117,18 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_3">
                <item>
-                <widget class="QLabel" name="tittle_label">
+                <widget class="QLabel" name="title_label">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="styleSheet">
-                  <string notr="true">color:white
-</string>
+                  <string notr="true">color: white;</string>
                  </property>
                  <property name="text">
-                  <string>Recipes_Organizer</string>
+                  <string>Recipes Organizer</string>
                  </property>
                 </widget>
                </item>
@@ -162,14 +155,14 @@
                  <widget class="QToolButton" name="minimize_button">
                   <property name="geometry">
                    <rect>
-                    <x>0</x>
+                    <x>10</x>
                     <y>0</y>
                     <width>22</width>
                     <height>22</height>
                    </rect>
                   </property>
                   <property name="text">
-                   <string>...</string>
+                   <string/>
                   </property>
                   <property name="icon">
                    <iconset>
@@ -185,14 +178,14 @@
                  <widget class="QToolButton" name="restore_button">
                   <property name="geometry">
                    <rect>
-                    <x>40</x>
+                    <x>50</x>
                     <y>0</y>
                     <width>22</width>
                     <height>22</height>
                    </rect>
                   </property>
                   <property name="text">
-                   <string>...</string>
+                   <string/>
                   </property>
                   <property name="icon">
                    <iconset>
@@ -208,14 +201,14 @@
                  <widget class="QToolButton" name="maximize_button">
                   <property name="geometry">
                    <rect>
-                    <x>40</x>
+                    <x>50</x>
                     <y>0</y>
                     <width>22</width>
                     <height>22</height>
                    </rect>
                   </property>
                   <property name="text">
-                   <string>...</string>
+                   <string/>
                   </property>
                   <property name="icon">
                    <iconset>
@@ -231,14 +224,14 @@
                  <widget class="QToolButton" name="close_button">
                   <property name="geometry">
                    <rect>
-                    <x>80</x>
+                    <x>90</x>
                     <y>0</y>
                     <width>22</width>
                     <height>22</height>
                    </rect>
                   </property>
                   <property name="text">
-                   <string>...</string>
+                   <string/>
                   </property>
                   <property name="icon">
                    <iconset>
@@ -281,15 +274,16 @@
                  </property>
                  <property name="font">
                   <font>
+                   <pointsize>10</pointsize>
                    <bold>true</bold>
                   </font>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QPushButton{
-	background-color: #ff6e40;
-	color: white
+	background-color : #ff6e40;
+	color: white;
 }
-QPushButton::hover{background-color: #ffc13b};</string>
+QPushButton::hover {background-color : #ffc13b};</string>
                  </property>
                  <property name="text">
                   <string>Nueva Receta</string>
@@ -328,7 +322,7 @@ QPushButton::hover{background-color: #ffc13b};</string>
                   <widget class="QLabel" name="label">
                    <property name="minimumSize">
                     <size>
-                     <width>0</width>
+                     <width>30</width>
                      <height>30</height>
                     </size>
                    </property>
@@ -339,7 +333,7 @@ QPushButton::hover{background-color: #ffc13b};</string>
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">background-color: rgb(255, 255, 255);
+                    <string notr="true">background-color: white;
 border-radius: 0px;</string>
                    </property>
                    <property name="text">
@@ -365,11 +359,12 @@ border-radius: 0px;</string>
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 0px;</string>
+                    <string notr="true">background-color: white;
+border-radius: 0px;
+</string>
                    </property>
                    <property name="placeholderText">
-                    <string>Buscar Receta</string>
+                    <string>Buscar receta...</string>
                    </property>
                   </widget>
                  </item>
@@ -379,7 +374,7 @@ border-radius: 0px;</string>
              </widget>
             </item>
             <item>
-             <widget class="QTableView" name="recipes_table"/>
+             <widget class="QTableWidget" name="recipes_table"/>
             </item>
            </layout>
           </widget>

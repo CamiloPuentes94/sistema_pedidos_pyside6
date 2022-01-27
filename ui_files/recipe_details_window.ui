@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>718</width>
-    <height>728</height>
+    <width>769</width>
+    <height>488</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-radius: 5px;</string>
+   <string notr="true">border-radius: 5px</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
@@ -40,7 +40,7 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
+     <layout class="QVBoxLayout" name="shadow_layout">
       <property name="spacing">
        <number>0</number>
       </property>
@@ -59,7 +59,7 @@
       <item>
        <widget class="QFrame" name="background_frame">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(218, 218, 218);</string>
+         <string notr="true">background-color: rgb(245, 240, 225);</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -67,9 +67,9 @@
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QFrame" name="top_bar_grame">
+          <widget class="QFrame" name="top_bar_frame">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -83,7 +83,7 @@
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(30, 61, 89);</string>
+            <string notr="true">background-color: #1e3d59;</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
@@ -93,13 +93,18 @@
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
-             <widget class="QLabel" name="tittle_label">
+             <widget class="QLabel" name="title_label">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="styleSheet">
-               <string notr="true">color:white
-</string>
+               <string notr="true">color: white;</string>
               </property>
               <property name="text">
-               <string>Recipes_Organizer</string>
+               <string>Recipes Organizer</string>
               </property>
              </widget>
             </item>
@@ -113,7 +118,7 @@
               </property>
               <property name="maximumSize">
                <size>
-                <width>110</width>
+                <width>113</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -126,14 +131,14 @@
               <widget class="QToolButton" name="minimize_button">
                <property name="geometry">
                 <rect>
-                 <x>0</x>
+                 <x>10</x>
                  <y>0</y>
                  <width>22</width>
                  <height>22</height>
                 </rect>
                </property>
                <property name="text">
-                <string>...</string>
+                <string/>
                </property>
                <property name="icon">
                 <iconset>
@@ -149,14 +154,14 @@
               <widget class="QToolButton" name="restore_button">
                <property name="geometry">
                 <rect>
-                 <x>40</x>
+                 <x>50</x>
                  <y>0</y>
                  <width>22</width>
                  <height>22</height>
                 </rect>
                </property>
                <property name="text">
-                <string>...</string>
+                <string/>
                </property>
                <property name="icon">
                 <iconset>
@@ -172,14 +177,14 @@
               <widget class="QToolButton" name="maximize_button">
                <property name="geometry">
                 <rect>
-                 <x>40</x>
+                 <x>50</x>
                  <y>0</y>
                  <width>22</width>
                  <height>22</height>
                 </rect>
                </property>
                <property name="text">
-                <string>...</string>
+                <string/>
                </property>
                <property name="icon">
                 <iconset>
@@ -195,14 +200,14 @@
               <widget class="QToolButton" name="close_button">
                <property name="geometry">
                 <rect>
-                 <x>80</x>
+                 <x>90</x>
                  <y>0</y>
                  <width>22</width>
                  <height>22</height>
                 </rect>
                </property>
                <property name="text">
-                <string>...</string>
+                <string/>
                </property>
                <property name="icon">
                 <iconset>
@@ -228,7 +233,7 @@
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_4">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
              <widget class="QFrame" name="frame">
               <property name="minimumSize">
@@ -252,6 +257,12 @@
               <layout class="QHBoxLayout" name="horizontalLayout">
                <item>
                 <widget class="QLabel" name="recipe_pic_label">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
                    <width>170</width>
@@ -271,13 +282,13 @@
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <widget class="QLabel" name="recipe_tittle_label">
+                 <widget class="QLabel" name="recipe_title_label">
                   <property name="geometry">
                    <rect>
-                    <x>30</x>
+                    <x>20</x>
                     <y>10</y>
-                    <width>331</width>
-                    <height>21</height>
+                    <width>341</width>
+                    <height>16</height>
                    </rect>
                   </property>
                   <property name="font">
@@ -296,9 +307,9 @@
                  <widget class="QLabel" name="label">
                   <property name="geometry">
                    <rect>
-                    <x>30</x>
-                    <y>50</y>
-                    <width>61</width>
+                    <x>20</x>
+                    <y>40</y>
+                    <width>71</width>
                     <height>16</height>
                    </rect>
                   </property>
@@ -315,34 +326,21 @@
                   <property name="geometry">
                    <rect>
                     <x>100</x>
-                    <y>50</y>
-                    <width>351</width>
-                    <height>20</height>
+                    <y>40</y>
+                    <width>311</width>
+                    <height>16</height>
                    </rect>
                   </property>
                   <property name="text">
                    <string>Categoria</string>
                   </property>
                  </widget>
-                 <widget class="QLabel" name="recipe_url_label_">
-                  <property name="geometry">
-                   <rect>
-                    <x>100</x>
-                    <y>80</y>
-                    <width>351</width>
-                    <height>20</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string>URL</string>
-                  </property>
-                 </widget>
                  <widget class="QLabel" name="label_2">
                   <property name="geometry">
                    <rect>
-                    <x>30</x>
-                    <y>80</y>
-                    <width>61</width>
+                    <x>20</x>
+                    <y>60</y>
+                    <width>71</width>
                     <height>16</height>
                    </rect>
                   </property>
@@ -355,25 +353,25 @@
                    <string>URL:</string>
                   </property>
                  </widget>
-                 <widget class="QLabel" name="recipe_budget_label_">
+                 <widget class="QLabel" name="recipe_url_label">
                   <property name="geometry">
                    <rect>
                     <x>100</x>
-                    <y>110</y>
-                    <width>361</width>
+                    <y>60</y>
+                    <width>311</width>
                     <height>16</height>
                    </rect>
                   </property>
                   <property name="text">
-                   <string>Presupuesto</string>
+                   <string>URL</string>
                   </property>
                  </widget>
                  <widget class="QLabel" name="label_3">
                   <property name="geometry">
                    <rect>
-                    <x>30</x>
-                    <y>110</y>
-                    <width>61</width>
+                    <x>20</x>
+                    <y>80</y>
+                    <width>71</width>
                     <height>16</height>
                    </rect>
                   </property>
@@ -383,7 +381,20 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Presupuesto:</string>
+                   <string>Presupuesto</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="recipe_budget_label">
+                  <property name="geometry">
+                   <rect>
+                    <x>100</x>
+                    <y>80</y>
+                    <width>311</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>Presupuesto</string>
                   </property>
                  </widget>
                 </widget>
@@ -401,9 +412,9 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_2">
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout_5">
+                <layout class="QVBoxLayout" name="verticalLayout_4">
                  <item>
-                  <widget class="QLabel" name="recipe_tittle_label_2">
+                  <widget class="QLabel" name="recipe_title_label_2">
                    <property name="font">
                     <font>
                      <pointsize>14</pointsize>
@@ -424,9 +435,9 @@
                 </layout>
                </item>
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout_6">
+                <layout class="QVBoxLayout" name="verticalLayout_5">
                  <item>
-                  <widget class="QLabel" name="recipe_tittle_label_3">
+                  <widget class="QLabel" name="recipe_title_label_3">
                    <property name="font">
                     <font>
                      <pointsize>14</pointsize>
