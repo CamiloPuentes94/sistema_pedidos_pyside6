@@ -1,10 +1,12 @@
-from PySide6.QtWidgets import QWidget
+from PySide6.QtWidgets import QWidget,QFileDialog
 
 
 from views.add_edit_window import AddEditWindow
 from views.general_custom_ui import GeneralCustomUi
 
 from db import recipes
+
+import shutil
 
 class AddWindowForm(QWidget, AddEditWindow):
     
@@ -42,4 +44,18 @@ class AddWindowForm(QWidget, AddEditWindow):
         )
         
         if recipes.insert(data):
+    
             print("Recipe Added")
+            
+    def select_img(self):
+        
+        # con esta funcion de QFileDialog abre ventana para selecionar retorna una lista con dos datos y el primer dato es la direccion del archivo
+        self.img_path_from = QFileDialog.getOpenFileName()[0]
+        # se guarda la direccion del archivo y con la funcion split nos divide con un / y se pone -1 para tomar el ultimo numero de la lista
+        img_name = self.image_path_from.split("/")[-1]
+        # esta varible contiene el nombre de la carpeta donde tendremos las imagenes y el nombre del archivo
+        self.img_path_to = f"recipe_images\{img_name}"
+        # se envia el nombre del archivo
+        self.image_path_line_edit.setText(img_name)
+        
+        
