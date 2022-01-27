@@ -7,7 +7,7 @@ class GeneralCustomUi():
         
         self.remove_default_title_bar()
         #funcion para mouseMoveEvent captura el moviento del mouse cuando pasa por widget
-        self.ui.top_bar_grame.mouseMoveEvent = self.move_window
+        self.ui.top_bar_frame.mouseMoveEvent = self.move_window
         self.set_window_shadow()
         self.set_title_bar_button()
     
@@ -19,7 +19,7 @@ class GeneralCustomUi():
         #funcion para ocultamos el boton de maximizar
         self.ui.maximize_button.setVisible(False)
         # funcion de margenes para el sombreado de la aplicacion se eliminan
-        self.ui.shadow_layout.setContentsMargins(0, 0, 0, 0)
+        self.ui.shawdow_layout.setContentsMargins(0, 0, 0, 0)
        
     # funcion para restaurar ventana  
         
@@ -29,7 +29,7 @@ class GeneralCustomUi():
         # funcion de visualizar botton de maximizar
         self.ui.maximize_button.setVisible(True)
         # funcion de margenes para el sombreado de la aplicacion se agregan
-        self.ui.shadow_layout.setContentsMargins(10, 10, 10, 10)
+        self.ui.shawdow_layout.setContentsMargins(10, 10, 10, 10)
     
     # funcion para capturar los click de los botones de la barra de titulo    
         
@@ -73,4 +73,4 @@ class GeneralCustomUi():
         # Se indica el color de la sombra
         shadow.setColor("#000000")
         # Se indica en el frame backgroud el efecto de sombra
-        self.ui.background_frane.setGraphicsEffect(shadow)
+        self.ui.background_frame.setGraphicsEffect(shadow)
