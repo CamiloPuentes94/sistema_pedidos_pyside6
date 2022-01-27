@@ -19,7 +19,7 @@ class GeneralCustomUi():
         #funcion para ocultamos el boton de maximizar
         self.ui.maximize_button.setVisible(False)
         # funcion de margenes para el sombreado de la aplicacion se eliminan
-        self.ui.shawdow_layout.setContentsMargins(0, 0, 0, 0)
+        self.ui.shadow_layout.setContentsMargins(0, 0, 0, 0)
        
     # funcion para restaurar ventana  
         
@@ -29,7 +29,7 @@ class GeneralCustomUi():
         # funcion de visualizar botton de maximizar
         self.ui.maximize_button.setVisible(True)
         # funcion de margenes para el sombreado de la aplicacion se agregan
-        self.ui.shawdow_layout.setContentsMargins(10, 10, 10, 10)
+        self.ui.shadow_layout.setContentsMargins(10, 10, 10, 10)
     
     # funcion para capturar los click de los botones de la barra de titulo    
         
