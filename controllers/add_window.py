@@ -16,6 +16,15 @@ class AddWindowForm(QWidget, AddEditWindow):
         
         self.setupUi(self)
         self.ui = GeneralCustomUi(self)
+        # Se llama la funcion de rellenar combo box
+        self.ui.fill_category_cb()
+        
+        # Se cambia el nombre del boton
+        self.add_edit_button.setText("Agregar")
+        # cuando se realice el click se conecta a la base de datos
+        self.add_edit_button.clicked.connect(self.add_recipe)
+        # se llama la funcion click para que selecione la imagen
+        self.select_img_button.clicked.connect(self.select_img)
         
     #esta funcion viene de QWidget no es creada por nosotros es de la clase QWidget, se debe poner para poder arrastrar la ventana
     def mousePressEvent(self, event):
@@ -55,7 +64,7 @@ class AddWindowForm(QWidget, AddEditWindow):
         # con esta funcion de QFileDialog abre ventana para selecionar retorna una lista con dos datos y el primer dato es la direccion del archivo
         self.img_path_from = QFileDialog.getOpenFileName()[0]
         # se guarda la direccion del archivo y con la funcion split nos divide con un / y se pone -1 para tomar el ultimo numero de la lista
-        img_name = self.image_path_from.split("/")[-1]
+        img_name = self.img_path_from.split("/")[-1]
         # esta varible contiene el nombre de la carpeta donde tendremos las imagenes y el nombre del archivo
         self.img_path_to = f"recipe_images\{img_name}"
         # se envia el nombre del archivo
