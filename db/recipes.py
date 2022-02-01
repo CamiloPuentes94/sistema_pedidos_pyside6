@@ -28,3 +28,24 @@ def insert(data):
     finally:
         cur.close()
         conn.close()
+
+def select_all():
+    conn = create_connection()
+    sql= """ SELECT
+    id,
+    img_path,
+    title,
+    category, FROM R
+    """
+    
+    try:
+        cur = conn.cursor()
+        cur.execute(sql)
+        recipes = cur.fetchall()
+        return recipes
+    except connector.Error as err:
+        print(f"Error at select_all function: {err.msg}")
+        return False
+    finally:
+        cur.close()
+        conn.close()
