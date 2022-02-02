@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QTableWidgetItem
+from PySide6.QtWidgets import QWidget, QTableWidgetItem, QAbstractItemView
 
 from views.main_window import MainWindow
 from views.general_custom_ui import GeneralCustomUi
@@ -40,6 +40,8 @@ class MainWindowForm(QWidget, MainWindow):
         self.recipes_table.verticalHeader().setDefaultSectionSize(200)
         # ocultar la columna id
         self.recipes_table.setColumnHidden(0, True)
+        # Al pulsar una columna se seleccionara toda la fila
+        self.recipes_table.setSelectionBehavior(QAbstractItemView.SelectRows)
      
         
     def populate_table(self):
