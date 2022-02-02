@@ -36,7 +36,10 @@ class MainWindowForm(QWidget, MainWindow):
         self.recipes_table.setHorizontalHeaderLabels(colum_labels)
         #Se cambia el ancho de las columnas para visualizar bien las imagenes
         self.recipes_table.setColumnWidth(1, 200)
+        #Se cambia el valor vertical de las columnas
         self.recipes_table.verticalHeader().setDefaultSectionSize(200)
+        # ocultar la columna id
+        self.recipes_table.setColumnHidden(0, True)
      
         
     def populate_table(self):
