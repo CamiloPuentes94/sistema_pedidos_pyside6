@@ -31,12 +31,7 @@ def insert(data):
 
 def select_all():
     conn = create_connection()
-    sql= """ SELECT
-    id,
-    img_path,
-    title,
-    category, FROM R
-    """
+    sql= """ SELECT id, img_path, title, category FROM recipes"""
     
     try:
         cur = conn.cursor()
