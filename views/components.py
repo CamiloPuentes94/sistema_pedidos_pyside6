@@ -27,5 +27,5 @@ class Button(QPushButton):
         
     # funcion para cambie el cursor cuando este en el boton
     def set_cursor(self):
-        pointer = QCursor(Qt.PointingHandCursor())
+        pointer = QCursor(Qt.PointingHandCursor)
         self.setCursor(pointer)
