@@ -16,6 +16,7 @@ class RecipeImg(QLabel):
 class Button(QPushButton):
     
     def __init__(self, icon, color):
+        super().__init__()
         # funcion para tamaño de boton
         self.setMinimumSize(30, 30)
         self.set_cursor()
