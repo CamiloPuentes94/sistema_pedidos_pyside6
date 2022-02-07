@@ -23,7 +23,7 @@ class Button(QPushButton):
         # funcion para ponerles un icono
         self.setIcon(QIcon(f"assets/icons/{icon}.png"))
         # funcion para cambiar color o cambiar estilo
-        self.setStyleSheet(f"border-radius: 15px; background-color {color};")
+        self.setStyleSheet(f"border-radius: 15px; background-color: {color};")
         
     # funcion para cambie el cursor cuando este en el boton
     def set_cursor(self):
