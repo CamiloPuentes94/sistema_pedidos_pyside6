@@ -66,9 +66,7 @@ class MainWindowForm(QWidget, MainWindow):
                         QTableWidgetItem(str(cell))
                     )
             self.recipes_table.setCellWidget(
-                index_row,
-                4,
-                self.build_action_buttons
+                index_row, 4, self.build_action_buttons()
             )
                     
     def build_action_buttons(self):
