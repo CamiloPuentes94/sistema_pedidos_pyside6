@@ -29,13 +29,14 @@ class MainWindowForm(QWidget, MainWindow):
      
     def config_table(self):
         # en esta variable colocamos el nombre de las columnas a visualizar
-        colum_labels = ("ID", "IMG", "TITULO", "CATEGORIA")
+        colum_labels = ("ID", "IMG", "TITULO", "CATEGORIA", "")
         # Se envian la cantidad de columnas que va a tener
         self.recipes_table.setColumnCount(len(colum_labels))
         #Se envian lo labels de la columna
         self.recipes_table.setHorizontalHeaderLabels(colum_labels)
         #Se cambia el ancho de las columnas para visualizar bien las imagenes
         self.recipes_table.setColumnWidth(1, 200)
+        self.recipes_table.setColumnWidth(4, 120)
         #Se cambia el valor vertical de las columnas
         self.recipes_table.verticalHeader().setDefaultSectionSize(200)
         # ocultar la columna id
