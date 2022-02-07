@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QWidget, QTableWidgetItem, QAbstractItemView
+from PySide6.QtWidgets import QWidget, QTableWidgetItem, QAbstractItemView, QHBoxLayout, QFrame
 
 from views.main_window import MainWindow
 from views.general_custom_ui import GeneralCustomUi
@@ -65,3 +65,29 @@ class MainWindowForm(QWidget, MainWindow):
                         index_cell,
                         QTableWidgetItem(str(cell))
                     )
+            self.recipes_table.setCellWidget(
+                index_row,
+                4,
+                self.build_action_buttons
+            )
+                    
+    def build_action_buttons(self):
+        # Boton de visualizar
+        view_button = components.Button("view", "#17A2BB")
+        # boton de editar
+        edit_button = components.Button("edit", "#007BFF")
+        # boton de eliminar
+        delete_button = components.Button("delete", "#DC3545")
+        
+        # layout horizontal de los botones
+        buttons_layout = QHBoxLayout()
+        #Se pone el orden como se quiere poner los botones
+        buttons_layout.addWidget(view_button)
+        buttons_layout.addWidget(edit_button)
+        buttons_layout.addWidget(delete_button)
+        
+        # Se deja los botones dentro de un frame
+        buttons_frame = QFrame()
+        buttons_frame.setLayout(buttons_layout)
+        
+        return buttons_frame
